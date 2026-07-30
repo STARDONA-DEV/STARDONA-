@@ -186,6 +186,27 @@ nav a.active {
   font-family: inherit;
   font-size: 1rem;
 }
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #1a1a2e;
+}
+
+body.light-mode header {
+    background-color: #f0f0f5;
+    color: #1a1a2e;
+}
+
+body.light-mode nav a {
+    color: #1a1a2e;
+}
 
 .contact-form button {
   margin-top: 1.5rem;
