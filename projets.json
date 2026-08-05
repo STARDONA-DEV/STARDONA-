@@ -5,3 +5,87 @@
     "lien": "https://www.facebook.com/share/1GsnQdk2eZ/"
   }
 ]
+{
+  "id": "camera-pocket-4k",
+  "nom": "Caméra Pocket 4K Ultra HD",
+  "prix": "600 000 FCFA",
+  "image": "Image/Screenshot_2026-08-03-14-09-44-893_com.miui.gallery-edit.jpg",
+  "carrousel": false
+}
+{
+  "id": "tshirt-king-navy-rouge",
+  "nom": "T-shirt King Bleu Marine",
+  "prix": "26 500 FCFA",
+  "images": [
+    "Image/Screenshot_2026-08-03-12-15-36-451_com.alibaba.aliexpresshd-edit.jpg",
+    "Image/Screenshot_2026-08-03-12-15-13-928_com.alibaba.aliexpresshd-edit.jpg"
+  ],
+  "carrousel": true
+}
+{
+  "id": "veste-noir-rouge",
+  "nom": "Veste Blazer Homme Liseré Rouge",
+  "prix": "45 000 FCFA",
+  "images": [
+    "Image/Screenshot_2026-08-03-12-16-09-140_com.alibaba.aliexpresshd-edit.jpg"
+  ],
+  "carrousel": false
+}
+{
+  "id": "polo-blanc-beige-vert",
+  "nom": "Polo Bicolore Rayé",
+  "prix": "15 000 FCFA",
+  "images": [
+    "Image/Screenshot_2026-08-03-12-13-02-138_com.alibaba.aliexpresshd-edit.jpg",
+    "Image/Screenshot_2026-08-03-12-12-32-545_com.alibaba.aliexpresshd-edit.jpg"
+  ],
+  "carrousel": true
+}
+{
+  "id": "trench-bordeaux-beige",
+  "nom": "Trench Homme Bordeaux",
+  "prix": "46 700 FCFA",
+  "images": [
+    "Image/Screenshot_2026-08-03-12-13-56-196_com.alibaba.aliexpresshd-edit.jpg",
+    "Image/Screenshot_2026-08-03-12-13-39-463_com.alibaba.aliexpresshd-edit.jpg"
+  ],
+  "carrousel": true
+}
+{
+  "id": "caban-camel",
+  "nom": "Caban Homme Camel",
+  "prix": "36 000 FCFA",
+  "image": "Image/Screenshot_2026-08-03-12-14-30-329_com.alibaba.aliexpresshd-edit.jpg",
+  "carrousel": false
+}
+{
+  "id": "pantalon-cargo-bleu-kaki",
+  "nom": "Pantalon Cargo Homme",
+  "prix": "22 600 FCFA",
+  "images": [
+    "Image/Screenshot_2026-08-03-12-11-01-434_com.alibaba.aliexpresshd-edit.jpg",
+    "Image/Screenshot_2026-08-03-12-10-38-761_com.alibaba.aliexpresshd-edit.jpg"
+  ],
+  "carrousel": true
+}
+{
+  "id": "boots-bordeaux",
+  "nom": "Boots Montantes Bordeaux",
+  "prix": "55 000 FCFA",
+  "image": "Image/Screenshot_2026-08-03-12-07-59-596_com.alibaba.aliexpresshd-edit.jpg",
+  "carrousel": false
+}
+{
+  "id": "jogger-sarouel-plisse",
+  "nom": "Jogger Sarouel Plissé",
+  "prix": "13 700 FCFA",
+  "image": "Image/Screenshot_2026-08-03-12-09-16-295_com.alibaba.aliexpresshd-edit.jpg",
+  "carrousel": false
+}
+{
+  "id": "jogger-cargo-zips",
+  "nom": "Jogger Cargo à Zips",
+  "prix": "19 400 FCFA",
+  "image": "Image/Screenshot_2026-08-03-12-10-12-317_com.alibaba.aliexpresshd-edit.jpg",
+  "carrousel": false
+}
