@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sac à main noir - STARDONABUSINESS</title>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f5f5f5; padding-bottom: 90px; }
+  .top-bar { background: #1a1a2e; color: white; padding: 15px; display: flex; align-items: center; gap: 15px; }
+  .top-bar a { color: white; text-decoration: none; font-size: 20px; }
+  .produit-image { background: white; padding: 20px; text-align: center; }
+  .produit-image img { max-width: 100%; max-height: 350px; object-fit: contain; }
+  .produit-info { background: white; padding: 20px; margin-top: 10px; }
+  .produit-info h1 { font-size: 1.3rem; margin-bottom: 8px; }
+  .prix { font-size: 1.8rem; font-weight: bold; color: #1a1a2e; margin: 10px 0; }
+  .disponibilite { color: #d97706; font-size: 0.9rem; margin-bottom: 10px; }
+  .bar-achat { position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 12px 15px; box-shadow: 0 -2px 8px rgba(0,0,0,0.1); display: flex; gap: 10px; }
+  .btn-achetez { flex: 1; background: #f79433; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
+  .overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 100; align-items: flex-end; }
+  .overlay.actif { display: flex; }
+  .formulaire { background: white; width: 100%; padding: 25px 20px 30px; border-radius: 16px 16px 0 0; }
+  .formulaire h2 { margin-bottom: 15px; font-size: 1.2rem; }
+  .formulaire label { display: block; margin-top: 12px; font-size: 0.9rem; color: #333; }
+  .formulaire input, .formulaire textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
+  .formulaire button { width: 100%; margin-top: 20px; padding: 14px; background: #1a1a2e; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+  .fermer { text-align: right; font-size: 1.5rem; cursor: pointer; color: #999; }
+  .message-statut { margin-top: 10px; font-size: 0.9rem; text-align: center; }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <a href="stardonabusiness.html">←</a>
+  <span>Détail du produit</span>
+</div>
+<div class="produit-image">
+  <img src="Image/sac-noir.jpg" alt="Sac à main noir">
+</div>
+<div class="produit-info">
+  <h1>Sac à main noir avec bandoulière</h1>
+  <p class="prix">15 000 FCFA</p>
+  <p class="disponibilite">Quelques articles restants</p>
+</div>
+<div class="bar-achat">
+  <button class="btn-achetez" onclick="ouvrirFormulaire()">Achetez</button>
+</div>
+<div class="overlay" id="overlayFormulaire">
+  <div class="formulaire">
+    <div class="fermer" onclick="fermerFormulaire()">×</div>
+    <h2>Finaliser la commande</h2>
+    <form id="formCommande">
+      <input type="hidden" name="produit" value="Sac à main noir avec bandoulière">
+      <input type="hidden" name="prix" value="15 000 FCFA">
+      <label for="nom">Nom complet</label>
+      <input type="text" id="nom" name="nom" required>
+      <label for="telephone">Téléphone</label>
+      <input type="tel" id="telephone" name="telephone" required>
+      <label for="adresse">Adresse de livraison</label>
+      <textarea id="adresse" name="adresse" rows="2" required></textarea>
+      <button type="submit">Valider la commande</button>
+      <p class="message-statut" id="messageStatut"></p>
+    </form>
+  </div>
+</div>
+<script>
+  emailjs.init("7dtD5C-8lcU9Sqm1_");
+  function ouvrirFormulaire() {
+    document.getElementById("overlayFormulaire").classList.add("actif");
+  }
+  function fermerFormulaire() {
+    document.getElementById("overlayFormulaire").classList.remove("actif");
+  }
+  document.getElementById("formCommande").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const statut = document.getElementById("messageStatut");
+    statut.textContent = "Envoi en cours...";
+    emailjs.sendForm("service_xn5o6ih", "template_92orjpv", this)
+      .then(() => {
+        statut.style.color = "green";
+        statut.textContent = "Commande envoyée ! Nous vous contacterons bientôt.";
+        this.reset();
+        setTimeout(fermerFormulaire, 2000);
+      })
+      .catch((erreur) => {
+        statut.style.color = "red";
+        statut.textContent = "Erreur, réessayez ou contactez-nous directement.";
+        console.error(erreur);
+      });
+  });
+</script>
+</body>
+  </html>
